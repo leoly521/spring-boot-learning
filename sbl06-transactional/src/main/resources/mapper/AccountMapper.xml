@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.springbootlearning.dao.AccountMapper">
+    <resultMap id="accountResultMap" type="com.example.springbootlearning.entity.Account">
+        <result property="id" column="ACC_ID" />
+        <result property="name" column="ACC_NAME" />
+        <result property="money" column="ACC_MONEY" />
+    </resultMap>
+
+    <insert id="add">
+        insert into TB_ACC (ACC_NAME, ACC_MONEY) values (#{name}, #{money})
+    </insert>
+
+    <update id="update">
+        update TB_ACC set
+          <if test="name neq null and name neq ''">ACC_NAME = #{name},</if>
+          ACC_MONEY = #{money}
+        where ACC_ID = #{id}
+    </update>
+
+    <delete id="delete">
+        delete TB_ACC where ACC_ID = #{id}
+    </delete>
+
+    <select id="getById" resultMap="accountResultMap">
+        select * from TB_ACC where ACC_ID = #{id}
+    </select>
+
+    <select id="findAll" resultMap="accountResultMap">
+        select * from TB_ACC
+    </select>
+</mapper>
