@@ -10,8 +10,10 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 
+import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.junit.runners.MethodSorters;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.restdocs.AutoConfigureRestDocs;
 import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
@@ -28,13 +30,14 @@ import org.springframework.test.web.servlet.MockMvc;
 @RunWith(SpringRunner.class)
 @WebMvcTest(UserController.class)
 @AutoConfigureRestDocs(outputDir = "target/generated-snippets")
+@FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class UserControllerTest {
 
     @Autowired
     private MockMvc mockMvc;
 
     @Test
-    public void findAll() throws Exception {
+    public void test01_findAll() throws Exception {
         this.mockMvc
                 .perform(
                         RestDocumentationRequestBuilders.get("/user", 1)
@@ -60,7 +63,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void getById() throws Exception {
+    public void test02_getById() throws Exception {
         this.mockMvc
                 .perform(
                         RestDocumentationRequestBuilders.get("/user/{id}", 1)
@@ -85,7 +88,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void add() throws Exception {
+    public void test03_add() throws Exception {
         this.mockMvc
                 .perform(
                         RestDocumentationRequestBuilders.post("/user", 1)
@@ -114,7 +117,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void update() throws Exception {
+    public void test04_update() throws Exception {
         this.mockMvc
                 .perform(
                         RestDocumentationRequestBuilders.put("/user/{id}", 1)
@@ -146,7 +149,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void delete() throws Exception {
+    public void test05_delete() throws Exception {
         this.mockMvc
                 .perform(
                         RestDocumentationRequestBuilders.delete("/user/{id}", 1)
@@ -164,7 +167,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void adocBuild() throws IOException {
+    public void test99_adocBuild() throws IOException {
         String appDir = System.getProperty("user.dir");
         String adocPath = appDir + "/src/docs/asciidocs/apiList.adoc";
         StringBuilder content = new StringBuilder();
