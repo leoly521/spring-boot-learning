@@ -1,7 +1,5 @@
 package com.example.springbootlearning;
 
-import java.util.Arrays;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -31,10 +29,13 @@ public class Sbl07MongodbApplication {
             this.accountRepository.save(new Account("zhangsan", 1000));
             this.accountRepository.save(new Account("wangwu", 2000));
 
-            System.out.println("findAll():\t" + this.accountRepository.findAll());
+            System.out.println("\n" + ">>>>>>>>>>>>>>>>>>>>>>>>>>>>");
 
+            System.out.println("findAll():\t" + this.accountRepository.findAll());
             System.out.println("getByName(\"wangwu\"):\t" + this.accountRepository.getByName("wangwu"));
             System.out.println("findByMoney(1000):\t" + this.accountRepository.findByMoney(1000));
+
+            System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>" + "\n");
         };
     }
 }
