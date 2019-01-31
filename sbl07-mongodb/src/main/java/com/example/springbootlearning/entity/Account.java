@@ -2,17 +2,28 @@ package com.example.springbootlearning.entity;
 
 import java.io.Serializable;
 
+import org.springframework.data.annotation.Id;
+
 public class Account implements Serializable {
 
-    private int id;
+    @Id
+    private String id;
     private String name;
     private double money;
 
-    public int getId() {
+    public Account() {
+    }
+
+    public Account(String name, double money) {
+        this.name = name;
+        this.money = money;
+    }
+
+    public String getId() {
         return this.id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
