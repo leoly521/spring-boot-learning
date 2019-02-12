@@ -1,0 +1,498 @@
+define({ "api": [
+  {
+    "type": "delete",
+    "url": "/user/{id}",
+    "title": "删除用户",
+    "group": "User",
+    "version": "0.0.1",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>访问令牌</p>"
+          }
+        ]
+      }
+    },
+    "error": {
+      "fields": {
+        "HTTP - 400": [
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-001",
+            "description": "<p>错误001</p>"
+          },
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-002",
+            "description": "<p>错误002</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "出错返回示例",
+          "content": "{\"error\":\"ERR-001\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/main/java/com/example/springbootlearning/controller/UserController.java",
+    "groupTitle": "User",
+    "name": "DeleteUserId"
+  },
+  {
+    "type": "get",
+    "url": "/user",
+    "title": "获取用户列表",
+    "group": "User",
+    "version": "0.0.1",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>访问令牌</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "HTTP - 200": [
+          {
+            "group": "HTTP - 200",
+            "type": "List[User]",
+            "optional": false,
+            "field": "list",
+            "description": "<p>用户列表</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "list.id",
+            "description": "<p>用户ID</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "list.username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "list.fullname",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Number",
+            "optional": false,
+            "field": "list.sex",
+            "description": "<p>性别: 1-男性, 0-女性</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "list.status",
+            "description": "<p>状态: true-启用, false-禁用</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "正常返回示例",
+          "content": "[{\"id\":1,\"username\":\"zhangsan\",\"fullname\":\"张三\",\"sex\":1,\"status\":true},{\"id\":2,\"username\":\"wangwu\",\"fullname\":\"王五\",\"sex\":1,\"status\":false}]",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "HTTP - 400": [
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-001",
+            "description": "<p>错误001</p>"
+          },
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-002",
+            "description": "<p>错误002</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "出错返回示例",
+          "content": "{\"error\":\"ERR-001\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/main/java/com/example/springbootlearning/controller/UserController.java",
+    "groupTitle": "User",
+    "name": "GetUser"
+  },
+  {
+    "type": "get",
+    "url": "/user/{id}",
+    "title": "根据用户ID获取用户",
+    "group": "User",
+    "version": "0.0.1",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>访问令牌</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p>用户ID</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "HTTP - 200": [
+          {
+            "group": "HTTP - 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p>用户ID</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "fullname",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Number",
+            "optional": false,
+            "field": "sex",
+            "description": "<p>性别: 1-男性, 0-女性</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "status",
+            "description": "<p>状态: true-启用, false-禁用</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "正常返回示例",
+          "content": "{\"id\":1,\"username\":\"zhangsan\",\"fullname\":\"张三\",\"sex\":1,\"status\":true}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "HTTP - 400": [
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-001",
+            "description": "<p>错误001</p>"
+          },
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-002",
+            "description": "<p>错误002</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "出错返回示例",
+          "content": "{\"error\":\"ERR-001\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/main/java/com/example/springbootlearning/controller/UserController.java",
+    "groupTitle": "User",
+    "name": "GetUserId"
+  },
+  {
+    "type": "post",
+    "url": "/user",
+    "title": "新增用户",
+    "group": "User",
+    "version": "0.0.1",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>访问令牌</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "fullname",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "sex",
+            "defaultValue": "1",
+            "description": "<p>性别: 1-男性, 0-女性</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "status",
+            "defaultValue": "true",
+            "description": "<p>状态: true-启用, false-禁用</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "HTTP - 200": [
+          {
+            "group": "HTTP - 200",
+            "type": "Integer",
+            "optional": false,
+            "field": "id",
+            "description": "<p>用户ID</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "String",
+            "optional": false,
+            "field": "fullname",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Number",
+            "optional": false,
+            "field": "sex",
+            "description": "<p>性别: 1-男性, 0-女性</p>"
+          },
+          {
+            "group": "HTTP - 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": "status",
+            "description": "<p>状态: true-启用, false-禁用</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "正常返回示例",
+          "content": "{\"id\":1,\"username\":\"zhangsan\",\"fullname\":\"张三\",\"sex\":1,\"status\":true}",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "HTTP - 400": [
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-001",
+            "description": "<p>错误001</p>"
+          },
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-002",
+            "description": "<p>错误002</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "出错返回示例",
+          "content": "{\"error\":\"ERR-001\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/main/java/com/example/springbootlearning/controller/UserController.java",
+    "groupTitle": "User",
+    "name": "PostUser"
+  },
+  {
+    "type": "put",
+    "url": "/user/{id}",
+    "title": "更新用户",
+    "group": "User",
+    "version": "0.0.1",
+    "header": {
+      "fields": {
+        "Header": [
+          {
+            "group": "Header",
+            "type": "String",
+            "optional": false,
+            "field": "token",
+            "description": "<p>访问令牌</p>"
+          }
+        ]
+      }
+    },
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "username",
+            "description": "<p>用户名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "fullname",
+            "description": "<p>姓名</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Number",
+            "optional": false,
+            "field": "sex",
+            "defaultValue": "1",
+            "description": "<p>性别: 1-男性, 0-女性</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "Boolean",
+            "optional": false,
+            "field": "status",
+            "defaultValue": "true",
+            "description": "<p>状态: true-启用, false-禁用</p>"
+          }
+        ]
+      }
+    },
+    "success": {
+      "fields": {
+        "HTTP - 200": [
+          {
+            "group": "HTTP - 200",
+            "type": "Boolean",
+            "optional": false,
+            "field": ".",
+            "description": "<p>结果: true-成功, false-失败</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "正常返回示例",
+          "content": "true",
+          "type": "json"
+        }
+      ]
+    },
+    "error": {
+      "fields": {
+        "HTTP - 400": [
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-001",
+            "description": "<p>错误001</p>"
+          },
+          {
+            "group": "HTTP - 400",
+            "optional": false,
+            "field": "ERR-002",
+            "description": "<p>错误002</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "出错返回示例",
+          "content": "{\"error\":\"ERR-001\"}",
+          "type": "json"
+        }
+      ]
+    },
+    "filename": "src/main/java/com/example/springbootlearning/controller/UserController.java",
+    "groupTitle": "User",
+    "name": "PutUserId"
+  }
+] });

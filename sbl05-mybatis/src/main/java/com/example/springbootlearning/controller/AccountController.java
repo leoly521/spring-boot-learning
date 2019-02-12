@@ -1,4 +1,4 @@
-package com.example.springbootlearning.service.controller;
+package com.example.springbootlearning.controller;
 
 import java.util.List;
 
@@ -27,7 +27,7 @@ public class AccountController {
 
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public boolean update(@PathVariable("id") int id, @RequestParam(value = "name") String name,
-                                @RequestParam(value = "money") double money) {
+                          @RequestParam(value = "money") double money) {
         Account account = new Account();
         account.setId(id);
         account.setName(name);

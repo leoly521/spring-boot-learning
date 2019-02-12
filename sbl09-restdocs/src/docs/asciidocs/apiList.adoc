@@ -1,0 +1,126 @@
+=== 1 获取所有用户
+
+==== request-headers 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/request-headers.adoc[]
+
+==== http-request 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/http-request.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/request-body.adoc[]
+
+==== http-response 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/http-response.adoc[]
+
+==== response-fields 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/response-fields.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\1 获取所有用户/response-body.adoc[]
+
+=== 2 根据ID获取指定用户
+
+==== request-headers 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/request-headers.adoc[]
+
+==== http-request 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/http-request.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/request-body.adoc[]
+
+==== http-response 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/http-response.adoc[]
+
+==== response-fields 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/response-fields.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\2 根据ID获取指定用户/response-body.adoc[]
+
+=== 3 新增用户
+
+==== request-headers 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/request-headers.adoc[]
+
+==== http-request 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/http-request.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/request-body.adoc[]
+
+==== http-response 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/http-response.adoc[]
+
+==== response-fields 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/response-fields.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\3 新增用户/response-body.adoc[]
+
+=== 4 根据ID更新指定用户
+
+==== request-headers 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/request-headers.adoc[]
+
+==== http-request 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/http-request.adoc[]
+
+==== request-parameters类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/request-parameters.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/request-body.adoc[]
+
+==== http-response 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/http-response.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\4 根据ID更新指定用户/response-body.adoc[]
+
+=== 5 根据ID删除指定用户
+
+==== request-headers 类型说明 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\5 根据ID删除指定用户/request-headers.adoc[]
+
+==== http-request 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\5 根据ID删除指定用户/http-request.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\5 根据ID删除指定用户/request-body.adoc[]
+
+==== http-response 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\5 根据ID删除指定用户/http-response.adoc[]
+
+==== request-body示例 
+
+include::D:\DEVELOP\study\spring-boot-learning\sbl09-restdocs\target\generated-snippets\5 根据ID删除指定用户/response-body.adoc[]
+
